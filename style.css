@@ -1,282 +1,182 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
-}
+/* ================= IMAGE FRAME ================= */
 
-body{
-    background:#0f172a;
-    color:#fff;
-}
-
-/* ================= HEADER ================= */
-
-header{
-    width:100%;
-    padding:20px 10%;
-    position:fixed;
-    top:0;
-    left:0;
+.hero-image{
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(0,0,0,0.7);
-    backdrop-filter:blur(10px);
-    z-index:1000;
+    justify-content:center;
+    margin-bottom:30px;
 }
 
-.logo{
-    font-size:22px;
-    font-weight:700;
-    color:#38bdf8;
-}
-
-nav{
-    display:flex;
-    gap:25px;
-}
-
-nav a{
-    color:#fff;
-    text-decoration:none;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#38bdf8;
-}
-
-/* header fixed থাকার কারণে content নিচে নামানো */
-section{
-    padding:120px 10%;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    min-height:100vh;
+.image-frame{
+    position:relative;
+    width:260px;
+    height:260px;
+    border-radius:50%;
     display:flex;
     justify-content:center;
     align-items:center;
-    text-align:center;
+    background:linear-gradient(135deg,#38bdf8,#0ea5e9,#06b6d4);
+    padding:8px;
+    box-shadow:0 0 40px rgba(56,189,248,0.5);
+    animation:float 4s ease-in-out infinite;
 }
 
-.hero-content{
-    max-width:900px;
-}
-
-.hero img{
-    width:200px;
-    height:200px;
+.image-frame img{
+    width:100%;
+    height:100%;
     object-fit:cover;
     border-radius:50%;
-    border:5px solid #fff;
-    margin-bottom:25px;
+    border:6px solid #0f172a;
 }
 
-.hero h1{
-    font-size:45px;
+.circle-spin{
+    position:absolute;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    border:3px dashed #38bdf8;
+    animation:spin 12s linear infinite;
 }
 
-.hero span{
+.tech-icon{
+    position:absolute;
+    background:#0f172a;
     color:#38bdf8;
+    padding:8px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:700;
+    border:1px solid #38bdf8;
+    box-shadow:0 0 15px rgba(56,189,248,0.5);
 }
 
-.hero h3{
-    margin-top:10px;
-    font-weight:400;
+.icon1{
+    top:-10px;
+    left:10px;
 }
 
-.hero p{
-    margin-top:20px;
-    line-height:1.7;
+.icon2{
+    bottom:10px;
+    right:-15px;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:12px 30px;
-    background:#38bdf8;
-    color:#000;
-    border-radius:30px;
-    text-decoration:none;
-    transition:0.4s;
+.icon3{
+    top:50%;
+    right:-25px;
 }
 
-.btn:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 20px #38bdf8;
-}
+/* ================= ABOUT ================= */
 
-/* ================= SKILLS ================= */
-
-.skill{
-    margin:20px 0;
-}
-
-.bar{
-    width:100%;
-    height:10px;
-    background:#1e293b;
-    border-radius:10px;
-    overflow:hidden;
-}
-
-.progress{
-    height:100%;
-    width:0;
-    background:#38bdf8;
-    transition:2s;
-}
-
-/* ================= EDUCATION ================= */
-
-.education{
+.about{
     text-align:center;
 }
 
-.edu-card{
+.about-box{
+    max-width:900px;
+    margin:auto;
     background:#1e293b;
-    margin:20px auto;
-    padding:25px;
-    border-radius:15px;
-    max-width:600px;
-    transition:0.5s;
+    padding:35px;
+    border-radius:20px;
+    line-height:1.9;
 }
 
-.edu-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.6);
-}
+/* ================= EXPERIENCE ================= */
 
-/* ================= PROJECTS ================= */
-
-.projects-container{
+.experience-container{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
 
-.project-card{
+.exp-card{
     background:#1e293b;
-    padding:20px;
+    padding:25px;
     border-radius:15px;
     transition:.4s;
 }
 
-.project-card:hover{
+.exp-card:hover{
     transform:translateY(-10px);
     box-shadow:0 10px 20px rgba(0,0,0,0.5);
 }
 
-/* ================= CONTACT ================= */
+/* ================= STRENGTH ================= */
 
-.social-links{
-    margin:20px 0;
+.strength-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-.social-links a{
-    display:inline-block;
-    padding:10px 20px;
-    border-radius:25px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.4s;
+.strength-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:.4s;
 }
 
-.facebook{
-    background:#1877f2;
+.strength-card:hover{
+    transform:translateY(-10px);
+}
+
+/* ================= SOCIAL ================= */
+
+.linkedin{
+    background:#0a66c2;
     color:white;
 }
 
-.facebook:hover{
+.linkedin:hover{
     background:white;
-    color:#1877f2;
+    color:#0a66c2;
     transform:scale(1.1);
 }
 
-.resume-buttons{
-    margin-top:20px;
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.resume-btn{
-    background:#38bdf8;
-    color:black;
-}
-
-.resume-btn:hover{
-    background:white;
-    color:#38bdf8;
-}
-
-.drive-btn{
-    background:#16a34a;
+.instagram{
+    background:#e1306c;
     color:white;
 }
 
-.drive-btn:hover{
+.instagram:hover{
     background:white;
-    color:#16a34a;
+    color:#e1306c;
+    transform:scale(1.1);
 }
 
-/* ================= FOOTER ================= */
+/* ================= HERO BUTTONS ================= */
 
-footer{
-    text-align:center;
-    padding:20px;
-    background:#020617;
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.secondary-btn{
+    background:#1e293b;
+    color:#38bdf8;
+    border:1px solid #38bdf8;
+}
+
+.secondary-btn:hover{
+    background:#38bdf8;
+    color:#000;
 }
 
 /* ================= ANIMATION ================= */
 
-.reveal{
-    opacity:0;
-    transform:translateY(40px);
-    transition:1s;
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
 }
 
-.reveal.active{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:768px){
-
-    header{
-        flex-direction:column;
-        gap:10px;
-        padding:15px 5%;
+@keyframes float{
+    0%,100%{
+        transform:translateY(0px);
     }
 
-    nav{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
-    }
-
-    section{
-        padding:100px 5%;
-    }
-
-    .hero h1{
-        font-size:28px;
-    }
-
-    .hero img{
-        width:150px;
-        height:150px;
-    }
-
-    .resume-buttons{
-        flex-direction:column;
-        align-items:center;
+    50%{
+        transform:translateY(-10px);
     }
 }
