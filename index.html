@@ -1,332 +1,828 @@
-<!-- ================= HEADER ================= -->
-<header>
-    <div class="logo">AH Dipto</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<title>Anik Hasan Dipto Portfolio</title>
+
+<!-- ICONS -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f5f5;
+    color:#222;
+    overflow-x:hidden;
+}
+
+section{
+    padding:100px 10%;
+}
+
+h2{
+    font-size:42px;
+    text-align:center;
+    margin-bottom:60px;
+    position:relative;
+}
+
+h2::after{
+    content:'';
+    width:90px;
+    height:4px;
+    background:#111;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:-15px;
+    border-radius:10px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:#111;
+    color:#fff;
+    text-decoration:none;
+    border-radius:40px;
+    transition:.4s;
+    font-weight:500;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    background:#444;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    width:100%;
+    padding:22px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(255,255,255,.8);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #ddd;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#111;
+}
+
+nav a{
+    margin-left:30px;
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#000;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:80px;
+}
+
+.hero-image{
+    display:flex;
+    justify-content:center;
+    position:relative;
+}
+
+.image-frame{
+    width:400px;
+    height:400px;
+    border-radius:50%;
+    position:relative;
+    overflow:hidden;
+    border:8px solid #111;
+    animation:float 5s ease-in-out infinite;
+}
+
+.image-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.circle-spin{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    border-top:8px solid #111;
+    border-bottom:8px solid #999;
+    animation:spin 5s linear infinite;
+}
+
+.tech-icon{
+    position:absolute;
+    background:#fff;
+    width:60px;
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    font-weight:700;
+    animation:bounce 3s infinite;
+}
+
+.icon1{
+    top:20px;
+    left:-10px;
+}
+
+.icon2{
+    bottom:40px;
+    right:-10px;
+}
+
+.icon3{
+    top:50%;
+    right:-30px;
+}
+
+.hero-text h1{
+    font-size:60px;
+    line-height:1.2;
+}
+
+.hero-text h1 span{
+    color:#111;
+}
+
+.hero-text h3{
+    margin:20px 0;
+    font-size:26px;
+    color:#666;
+}
+
+.hero-text p{
+    line-height:1.8;
+    margin-bottom:35px;
+    color:#555;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.secondary-btn{
+    background:#fff;
+    color:#111;
+    border:2px solid #111;
+}
+
+.secondary-btn:hover{
+    background:#111;
+    color:#fff;
+}
+
+/* ================= ABOUT ================= */
+
+.about-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    background:#fff;
+    padding:50px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.about-box p{
+    margin-bottom:20px;
+    line-height:1.9;
+    color:#555;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.skill-card{
+    background:#fff;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    transition:.4s;
+    box-shadow:0 10px 20px rgba(0,0,0,.05);
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+}
+
+.skill-card i{
+    font-size:55px;
+    margin-bottom:20px;
+    color:#111;
+}
+
+.skill-card h3{
+    margin-bottom:10px;
+}
+
+.skill-card p{
+    color:#777;
+}
+
+/* ================= EDUCATION ================= */
+
+.edu-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.edu-card{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.05);
+    transition:.4s;
+}
+
+.edu-card:hover{
+    transform:translateY(-10px);
+}
+
+.edu-card h3{
+    margin-bottom:15px;
+}
+
+.edu-card p{
+    color:#666;
+}
+
+.edu-card span{
+    display:inline-block;
+    margin-top:15px;
+    color:#111;
+    font-weight:600;
+}
+
+/* ================= EXPERIENCE ================= */
+
+.exp-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.exp-card{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    transition:.4s;
+    box-shadow:0 10px 20px rgba(0,0,0,.05);
+}
+
+.exp-card:hover{
+    transform:scale(1.05);
+}
+
+/* ================= PROJECTS ================= */
+
+.projects-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    transition:.4s;
+    box-shadow:0 10px 20px rgba(0,0,0,.05);
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card h3{
+    margin-bottom:15px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    background:#fff;
+    padding:50px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.contact-box p{
+    margin:15px 0;
+}
+
+.social-links{
+    margin-top:30px;
+}
+
+.social-links a{
+    width:55px;
+    height:55px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#111;
+    color:#fff;
+    margin:0 10px;
+    font-size:22px;
+    text-decoration:none;
+    transition:.4s;
+}
+
+.social-links a:hover{
+    transform:translateY(-8px);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#111;
+    color:#fff;
+}
+
+/* ================= ANIMATION ================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+.hero-content{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.hero-text h1{
+    font-size:42px;
+}
+
+.image-frame{
+    width:300px;
+    height:300px;
+}
+
+nav{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">AH Dipto</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
 </header>
 
-<!-- ================= HERO SECTION ================= -->
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <!-- IMAGE -->
-        <div class="hero-image">
+<div class="hero-image">
 
-            <!-- CSE STYLE FRAME -->
-            <div class="image-frame">
-                <div class="circle-spin"></div>
+<div class="image-frame">
 
-                <img src="anik.png" alt="S M Anik Hasan Dipto">
+<div class="circle-spin"></div>
 
-                <!-- floating tech icons -->
-                <span class="tech-icon icon1">&lt;/&gt;</span>
-                <span class="tech-icon icon2">{ }</span>
-                <span class="tech-icon icon3">CSE</span>
-            </div>
+<img src="anik.png" alt="Anik Hasan Dipto">
 
-        </div>
+<span class="tech-icon icon1">
+<i class="fa-solid fa-code"></i>
+</span>
 
-        <!-- TEXT -->
-        <div class="hero-text">
+<span class="tech-icon icon2">
+<i class="fa-solid fa-laptop-code"></i>
+</span>
 
-            <h1>Hi, I'm <span>S M Anik Hasan Dipto</span></h1>
+<span class="tech-icon icon3">
+CSE
+</span>
 
-            <h3>BSc (Eng) in Computer Science & Engineering</h3>
+</div>
 
-            <p>
-                A creative and responsible person who enjoys making videos
-                and organizing events. Friendly, dependable, and always eager
-                to learn new technologies and improve skills in software,
-                multimedia, and leadership.
-            </p>
+</div>
 
-            <div class="hero-buttons">
-                <a href="#contact" class="btn">Contact Me</a>
+<div class="hero-text">
 
-                <a href="S.M. Anik Hasan Dipto.pdf"
-                   download
-                   class="btn secondary-btn">
-                   Download CV
-                </a>
-            </div>
+<h1>Hi, I'm <span>S M Anik Hasan Dipto</span></h1>
 
-        </div>
+<h3>CSE Student & Creative Multimedia Designer</h3>
 
-    </div>
+<p>
+Passionate about programming, multimedia design,
+video editing, animation, event management,
+and modern web technologies.
+I love building creative and interactive digital experiences.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact" class="btn">
+Contact Me
+</a>
+
+<a href="Resume.pdf" download class="btn secondary-btn">
+Download CV
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- ================= ABOUT ================= -->
+
 <section class="about reveal" id="about">
 
-    <h2>Profile</h2>
+<h2>Profile</h2>
 
-    <div class="about-box">
+<div class="about-box">
 
-        <p>
-            I am a passionate CSE student at Green University of Bangladesh.
-            I enjoy programming, web development, video editing, animation,
-            event management, and creative multimedia work.
-        </p>
+<p>
+I am a passionate Computer Science & Engineering student at
+Green University of Bangladesh with strong interest in software,
+multimedia, creativity, and leadership activities.
+</p>
 
-        <p>
-            I have experience working as a Video & Multimedia Master at
-            IEEE GUB Student Branch and also worked in event management,
-            hosting, and volunteering activities.
-        </p>
+<p>
+Experienced in event management, hosting, video editing,
+and volunteering activities through IEEE GUB Student Branch
+and PhotoStory Event Management.
+</p>
 
-    </div>
+</div>
 
 </section>
 
 <!-- ================= SKILLS ================= -->
-<section class="skills reveal" id="skills">
 
-    <h2>My Skills</h2>
+<section class="reveal" id="skills">
 
-    <!-- Programming -->
-    <div class="skill">
-        <div class="skill-name">C (Advanced)</div>
-        <div class="bar">
-            <div class="progress" data-width="92%"></div>
-        </div>
-    </div>
+<h2>Skills</h2>
 
-    <div class="skill">
-        <div class="skill-name">C# (Advanced)</div>
-        <div class="bar">
-            <div class="progress" data-width="88%"></div>
-        </div>
-    </div>
+<div class="skills-container">
 
-    <div class="skill">
-        <div class="skill-name">C++ (Advanced)</div>
-        <div class="bar">
-            <div class="progress" data-width="85%"></div>
-        </div>
-    </div>
+<div class="skill-card">
+<i class="fa-brands fa-html5"></i>
+<h3>HTML5</h3>
+<p>Modern responsive website design</p>
+</div>
 
-    <div class="skill">
-        <div class="skill-name">Python (Intermediate)</div>
-        <div class="bar">
-            <div class="progress" data-width="75%"></div>
-        </div>
-    </div>
+<div class="skill-card">
+<i class="fa-brands fa-css3-alt"></i>
+<h3>CSS3</h3>
+<p>Animation & modern UI design</p>
+</div>
 
-    <div class="skill">
-        <div class="skill-name">Java (Intermediate)</div>
-        <div class="bar">
-            <div class="progress" data-width="72%"></div>
-        </div>
-    </div>
+<div class="skill-card">
+<i class="fa-brands fa-js"></i>
+<h3>JavaScript</h3>
+<p>Interactive web development</p>
+</div>
 
-    <div class="skill">
-        <div class="skill-name">HTML & CSS (Intermediate)</div>
-        <div class="bar">
-            <div class="progress" data-width="80%"></div>
-        </div>
-    </div>
+<div class="skill-card">
+<i class="fa-brands fa-python"></i>
+<h3>Python</h3>
+<p>Intermediate Programming</p>
+</div>
 
-    <!-- Other Skills -->
-    <div class="skill">
-        <div class="skill-name">Video Editing</div>
-        <div class="bar">
-            <div class="progress" data-width="90%"></div>
-        </div>
-    </div>
+<div class="skill-card">
+<i class="fa-solid fa-video"></i>
+<h3>Video Editing</h3>
+<p>Creative cinematic editing</p>
+</div>
 
-    <div class="skill">
-        <div class="skill-name">Animation</div>
-        <div class="bar">
-            <div class="progress" data-width="80%"></div>
-        </div>
-    </div>
+<div class="skill-card">
+<i class="fa-solid fa-camera"></i>
+<h3>Photography</h3>
+<p>Creative photography & visuals</p>
+</div>
 
-    <div class="skill">
-        <div class="skill-name">Event Management</div>
-        <div class="bar">
-            <div class="progress" data-width="85%"></div>
-        </div>
-    </div>
+</div>
 
 </section>
 
 <!-- ================= EDUCATION ================= -->
-<section class="education reveal" id="education">
 
-    <h2>Education</h2>
+<section class="reveal" id="education">
 
-    <div class="edu-container">
+<h2>Education</h2>
 
-        <div class="edu-card">
-            <h3>Bachelor of Science in Computer Science & Engineering</h3>
-            <p>Green University of Bangladesh</p>
-            <span>Running</span>
-        </div>
+<div class="edu-container">
 
-        <div class="edu-card">
-            <h3>Higher Secondary Certificate (HSC)</h3>
-            <p>Narsingdi Independent College</p>
-            <span>2022 | Science</span>
-        </div>
+<div class="edu-card">
+<h3>BSc in CSE</h3>
+<p>Green University of Bangladesh</p>
+<span>Running</span>
+</div>
 
-        <div class="edu-card">
-            <h3>Secondary School Certificate (SSC)</h3>
-            <p>Shibpur Govt. Pilot Model High School</p>
-            <span>2020 | Science</span>
-        </div>
+<div class="edu-card">
+<h3>HSC</h3>
+<p>Narsingdi Independent College</p>
+<span>2022</span>
+</div>
 
-    </div>
+<div class="edu-card">
+<h3>SSC</h3>
+<p>Shibpur Govt. Pilot Model High School</p>
+<span>2020</span>
+</div>
+
+</div>
 
 </section>
 
 <!-- ================= EXPERIENCE ================= -->
-<section class="experience reveal" id="experience">
 
-    <h2>Experience & Activities</h2>
+<section class="reveal" id="experience">
 
-    <div class="experience-container">
+<h2>Experience</h2>
 
-        <div class="exp-card">
-            <h3>Video & Multimedia Master</h3>
-            <p>IEEE GUB Student Branch</p>
-        </div>
+<div class="exp-container">
 
-        <div class="exp-card">
-            <h3>Video Editor</h3>
-            <p>PhotoStory</p>
-        </div>
+<div class="exp-card">
+<h3>Video & Multimedia Master</h3>
+<p>IEEE GUB Student Branch</p>
+</div>
 
-        <div class="exp-card">
-            <h3>Event Planner</h3>
-            <p>PhotoStory Event Management</p>
-        </div>
+<div class="exp-card">
+<h3>Video Editor</h3>
+<p>PhotoStory</p>
+</div>
 
-        <div class="exp-card">
-            <h3>Volunteer Member</h3>
-            <p>Narsingdi Zila Volunteer Forum</p>
-        </div>
+<div class="exp-card">
+<h3>Event Planner</h3>
+<p>PhotoStory Event Management</p>
+</div>
 
-        <div class="exp-card">
-            <h3>Program Host</h3>
-            <p>Tanunner Joyjatra 2025</p>
-        </div>
+<div class="exp-card">
+<h3>Volunteer Member</h3>
+<p>Narsingdi Zila Volunteer Forum</p>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 <!-- ================= PROJECTS ================= -->
-<section class="projects reveal" id="projects">
 
-    <h2>Projects</h2>
+<section class="reveal" id="projects">
 
-    <div class="projects-container">
+<h2>Projects</h2>
 
-        <div class="project-card">
-            <h3>Racing Game</h3>
-            <p>2D racing game built with Scratch Programming.</p>
-        </div>
+<div class="projects-container">
 
-        <div class="project-card">
-            <h3>Online Shopping Cart</h3>
-            <p>E-commerce system developed using Java.</p>
-        </div>
+<div class="project-card">
+<h3>Racing Game</h3>
+<p>2D racing game using Scratch.</p>
+</div>
 
-        <div class="project-card">
-            <h3>Earthquake Detector</h3>
-            <p>EEE Lab based project for earthquake detection.</p>
-        </div>
+<div class="project-card">
+<h3>Online Shopping Cart</h3>
+<p>E-commerce project developed in Java.</p>
+</div>
 
-        <div class="project-card">
-            <h3>Traffic Light System</h3>
-            <p>Digital Logic Design Lab Project.</p>
-        </div>
+<div class="project-card">
+<h3>Earthquake Detector</h3>
+<p>EEE Lab project for earthquake detection.</p>
+</div>
 
-    </div>
+<div class="project-card">
+<h3>Traffic Light System</h3>
+<p>Digital logic design lab project.</p>
+</div>
 
-</section>
-
-<!-- ================= PERSONAL STRENGTH ================= -->
-<section class="strength reveal">
-
-    <h2>Personal Strengths</h2>
-
-    <div class="strength-container">
-
-        <div class="strength-card">
-            Strong aesthetic sense and design mindset
-        </div>
-
-        <div class="strength-card">
-            Ability to manage multiple projects efficiently
-        </div>
-
-        <div class="strength-card">
-            Strong coordination and communication skills
-        </div>
-
-        <div class="strength-card">
-            Fast learner with growth mindset
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section class="contact reveal" id="contact">
 
-    <h2>Contact Me</h2>
+<section class="reveal" id="contact">
 
-    <p><strong>Email:</strong> smanikh100@gmail.com</p>
+<h2>Contact</h2>
 
-    <p><strong>Phone:</strong> +8801878269690</p>
+<div class="contact-box">
 
-    <p><strong>Country:</strong> Bangladesh</p>
+<p><strong>Email:</strong> smanikh100@gmail.com</p>
 
-    <!-- SOCIAL LINKS -->
-    <div class="social-links">
+<p><strong>Phone:</strong> +8801878269690</p>
 
-        <a href="https://www.facebook.com/anik.hasandipto.1"
-           target="_blank"
-           class="facebook">
-           Facebook
-        </a>
+<p><strong>Country:</strong> Bangladesh</p>
 
-        <a href="https://www.linkedin.com/in/ahdipto/"
-           target="_blank"
-           class="linkedin">
-           LinkedIn
-        </a>
+<div class="social-links">
 
-        <a href="https://www.instagram.com/dip.tooo?utm_source=qr"
-           target="_blank"
-           class="instagram">
-           Instagram
-        </a>
+<a href="https://facebook.com" target="_blank">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
 
-    </div>
+<a href="https://linkedin.com" target="_blank">
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
 
-    <!-- BUTTONS -->
-    <div class="resume-buttons">
+<a href="https://instagram.com" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
 
-        <a href="Resume.pdf"
-           download
-           class="btn resume-btn">
-           Download Resume
-        </a>
+<a href="https://github.com" target="_blank">
+<i class="fa-brands fa-github"></i>
+</a>
 
-    </div>
+</div>
 
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+© 2026 S M Anik Hasan Dipto | Portfolio Website
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* SCROLL REVEAL */
+
+window.addEventListener('scroll', reveal);
+
+function reveal(){
+
+    let reveals = document.querySelectorAll('.reveal');
+
+    for(let i = 0; i < reveals.length; i++){
+
+        let windowHeight = window.innerHeight;
+
+        let revealTop = reveals[i].getBoundingClientRect().top;
+
+        let revealPoint = 100;
+
+        if(revealTop < windowHeight - revealPoint){
+            reveals[i].classList.add('active');
+        }
+
+    }
+
+}
+
+/* ACTIVE NAV */
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop;
+
+        if(pageYOffset >= sectionTop - 200){
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(a => {
+
+        a.classList.remove("active");
+
+        if(a.getAttribute("href") === "#" + current){
+            a.classList.add("active");
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
 </section>
 
 <!-- ================= FOOTER ================= -->
