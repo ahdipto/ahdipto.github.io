@@ -1,168 +1,341 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>S.M. Anik Hasan Dipto | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
+<!-- ================= HEADER ================= -->
 <header>
     <div class="logo">AH Dipto</div>
+
     <nav>
         <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<!-- Hero Section -->
+<!-- ================= HERO SECTION ================= -->
 <section class="hero" id="home">
+
     <div class="hero-content">
-        
+
+        <!-- IMAGE -->
         <div class="hero-image">
-            <!-- Add your photo here -->
-            <img src="IMG_7384.jpg.jpeg" alt="S.M. Anik Hasan Dipto">
+
+            <!-- CSE STYLE FRAME -->
+            <div class="image-frame">
+                <div class="circle-spin"></div>
+
+                <img src="IMG_7384.jpg.jpeg" alt="S.M. Anik Hasan Dipto">
+
+                <!-- floating tech icons -->
+                <span class="tech-icon icon1">&lt;/&gt;</span>
+                <span class="tech-icon icon2">{ }</span>
+                <span class="tech-icon icon3">CSE</span>
+            </div>
+
         </div>
 
+        <!-- TEXT -->
         <div class="hero-text">
-            <h1>Hi, I'm <span>S.M. Anik Hasan Dipto</span></h1>
-            <h3>BSc (Eng) in CSE Student</h3>
+
+            <h1>Hi, I'm <span>S M Anik Hasan Dipto</span></h1>
+
+            <h3>BSc (Eng) in Computer Science & Engineering</h3>
+
             <p>
-                I am a student with a passion for technology. 
-                I enjoy solving problems and building web projects.
-                My goal is to become a skilled Software Engineer 
-                and create helpful tools that make a difference.
-
-
+                A creative and responsible person who enjoys making videos
+                and organizing events. Friendly, dependable, and always eager
+                to learn new technologies and improve skills in software,
+                multimedia, and leadership.
             </p>
-            <a href="#contact" class="btn">Contact Me</a>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn">Contact Me</a>
+
+                <a href="S.M. Anik Hasan Dipto.pdf"
+                   download
+                   class="btn secondary-btn">
+                   Download CV
+                </a>
+            </div>
+
         </div>
 
     </div>
+
 </section>
 
-<!-- SKILLS -->
+<!-- ================= ABOUT ================= -->
+<section class="about reveal" id="about">
+
+    <h2>Profile</h2>
+
+    <div class="about-box">
+
+        <p>
+            I am a passionate CSE student at Green University of Bangladesh.
+            I enjoy programming, web development, video editing, animation,
+            event management, and creative multimedia work.
+        </p>
+
+        <p>
+            I have experience working as a Video & Multimedia Master at
+            IEEE GUB Student Branch and also worked in event management,
+            hosting, and volunteering activities.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= SKILLS ================= -->
 <section class="skills reveal" id="skills">
+
     <h2>My Skills</h2>
 
+    <!-- Programming -->
     <div class="skill">
         <div class="skill-name">C (Advanced)</div>
-        <div class="bar"><div class="progress" data-width="90%"></div></div>
+        <div class="bar">
+            <div class="progress" data-width="92%"></div>
+        </div>
     </div>
 
     <div class="skill">
-        <div class="skill-name">Java (Intermediate)</div>
-        <div class="bar"><div class="progress" data-width="70%"></div></div>
+        <div class="skill-name">C# (Advanced)</div>
+        <div class="bar">
+            <div class="progress" data-width="88%"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-name">C++ (Advanced)</div>
+        <div class="bar">
+            <div class="progress" data-width="85%"></div>
+        </div>
     </div>
 
     <div class="skill">
         <div class="skill-name">Python (Intermediate)</div>
-        <div class="bar"><div class="progress" data-width="75%"></div></div>
+        <div class="bar">
+            <div class="progress" data-width="75%"></div>
+        </div>
     </div>
 
     <div class="skill">
-        <div class="skill-name">C++ (Intermediate)</div>
-        <div class="bar"><div class="progress" data-width="70%"></div></div>
+        <div class="skill-name">Java (Intermediate)</div>
+        <div class="bar">
+            <div class="progress" data-width="72%"></div>
+        </div>
     </div>
 
     <div class="skill">
-        <div class="skill-name">Video Editing (Advanced)</div>
-        <div class="bar"><div class="progress" data-width="85%"></div></div>
+        <div class="skill-name">HTML & CSS (Intermediate)</div>
+        <div class="bar">
+            <div class="progress" data-width="80%"></div>
+        </div>
     </div>
+
+    <!-- Other Skills -->
+    <div class="skill">
+        <div class="skill-name">Video Editing</div>
+        <div class="bar">
+            <div class="progress" data-width="90%"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-name">Animation</div>
+        <div class="bar">
+            <div class="progress" data-width="80%"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-name">Event Management</div>
+        <div class="bar">
+            <div class="progress" data-width="85%"></div>
+        </div>
+    </div>
+
 </section>
-<!-- Education Section -->
-<section class="education" id="education">
+
+<!-- ================= EDUCATION ================= -->
+<section class="education reveal" id="education">
+
     <h2>Education</h2>
 
     <div class="edu-container">
 
         <div class="edu-card">
-            <h3>Bachelor in Computer Science & Engineering</h3>
-            <p>Green University of Bangladesh (Running)</p>
+            <h3>Bachelor of Science in Computer Science & Engineering</h3>
+            <p>Green University of Bangladesh</p>
+            <span>Running</span>
         </div>
 
         <div class="edu-card">
-            <h3>Higher Secondary Certificate (2022)</h3>
+            <h3>Higher Secondary Certificate (HSC)</h3>
             <p>Narsingdi Independent College</p>
+            <span>2022 | Science</span>
         </div>
 
         <div class="edu-card">
-            <h3>Secondary School Certificate (2020)</h3>
+            <h3>Secondary School Certificate (SSC)</h3>
             <p>Shibpur Govt. Pilot Model High School</p>
+            <span>2020 | Science</span>
         </div>
 
     </div>
+
 </section>
-<!-- PROJECTS -->
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="experience reveal" id="experience">
+
+    <h2>Experience & Activities</h2>
+
+    <div class="experience-container">
+
+        <div class="exp-card">
+            <h3>Video & Multimedia Master</h3>
+            <p>IEEE GUB Student Branch</p>
+        </div>
+
+        <div class="exp-card">
+            <h3>Video Editor</h3>
+            <p>PhotoStory</p>
+        </div>
+
+        <div class="exp-card">
+            <h3>Event Planner</h3>
+            <p>PhotoStory Event Management</p>
+        </div>
+
+        <div class="exp-card">
+            <h3>Volunteer Member</h3>
+            <p>Narsingdi Zila Volunteer Forum</p>
+        </div>
+
+        <div class="exp-card">
+            <h3>Program Host</h3>
+            <p>Tanunner Joyjatra 2025</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
 <section class="projects reveal" id="projects">
+
     <h2>Projects</h2>
 
     <div class="projects-container">
+
         <div class="project-card">
             <h3>Racing Game</h3>
-            <p>2D racing game built with C++.</p>
+            <p>2D racing game built with Scratch Programming.</p>
         </div>
 
         <div class="project-card">
             <h3>Online Shopping Cart</h3>
-            <p>E-commerce system using Java.</p>
+            <p>E-commerce system developed using Java.</p>
         </div>
 
         <div class="project-card">
             <h3>Earthquake Detector</h3>
-            <p>Python-based detection project.</p>
+            <p>EEE Lab based project for earthquake detection.</p>
         </div>
 
         <div class="project-card">
             <h3>Traffic Light System</h3>
-            <p>Simulation using C programming.</p>
+            <p>Digital Logic Design Lab Project.</p>
         </div>
+
     </div>
+
 </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: smanikh100@gmail.com</p>
-    <p>Phone: +8801878269690</p>
+<!-- ================= PERSONAL STRENGTH ================= -->
+<section class="strength reveal">
 
-    <div class="social-links">
-        <a href="https://www.facebook.com/anik.hasandipto.1" target="_blank" class="facebook">
-            Facebook Profile
-        </a>
+    <h2>Personal Strengths</h2>
+
+    <div class="strength-container">
+
+        <div class="strength-card">
+            Strong aesthetic sense and design mindset
+        </div>
+
+        <div class="strength-card">
+            Ability to manage multiple projects efficiently
+        </div>
+
+        <div class="strength-card">
+            Strong coordination and communication skills
+        </div>
+
+        <div class="strength-card">
+            Fast learner with growth mindset
+        </div>
+
     </div>
 
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact reveal" id="contact">
+
+    <h2>Contact Me</h2>
+
+    <p><strong>Email:</strong> smanikh100@gmail.com</p>
+
+    <p><strong>Phone:</strong> +8801878269690</p>
+
+    <p><strong>Country:</strong> Bangladesh</p>
+
+    <!-- SOCIAL LINKS -->
+    <div class="social-links">
+
+        <a href="https://www.facebook.com/anik.hasandipto.1"
+           target="_blank"
+           class="facebook">
+           Facebook
+        </a>
+
+        <a href="https://www.linkedin.com/in/ahdipto/"
+           target="_blank"
+           class="linkedin">
+           LinkedIn
+        </a>
+
+        <a href="https://www.instagram.com/dip.tooo?utm_source=qr"
+           target="_blank"
+           class="instagram">
+           Instagram
+        </a>
+
+    </div>
+
+    <!-- BUTTONS -->
     <div class="resume-buttons">
 
-    <!-- Direct PDF Download -->
-    <a href="S.M. Anik Hasan Dipto.pdf" download class="btn resume-btn">
-        Download Resume (PDF)
-    </a>
+        <a href="S.M. Anik Hasan Dipto.pdf"
+           download
+           class="btn resume-btn">
+           Download Resume
+        </a>
 
-    <!-- Google Drive Link -->
-    <a href="https://drive.google.com/drive/folders/10v4HIIuLOoDmxliFazVtR9ctUdM0Gh4l" 
-       target="_blank" 
-       class="btn drive-btn">
-        View Work (Drive)
-    </a>
+        <a href="https://drive.google.com/drive/folders/10v4HIIuLOoDmxliFazVtR9ctUdM0Gh4l"
+           target="_blank"
+           class="btn drive-btn">
+           View Works
+        </a>
 
-</div>
+    </div>
+
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer>
-    © 2026 S.M. Anik Hasan Dipto | Student of CSE
+    © 2026 S.M. Anik Hasan Dipto | CSE Student | Green University of Bangladesh
 </footer>
-
-<!-- JS -->
-<script src="script.js"></script>
-
-</body>
-</html>
